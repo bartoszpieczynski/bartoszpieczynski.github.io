@@ -1,0 +1,76 @@
+.projects {
+   display: flex;
+   align-items: center;
+
+   &__container {
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+   }
+
+   &__github {
+      font-size: 10rem;
+      margin-top: 3rem;
+      color: $color-primary-5;
+
+      &:hover {
+         cursor: pointer;
+      }
+   }
+
+   &__presentation {
+      flex: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+
+      &__lawenda {
+         border: 5px solid $color-primary-5;
+         border-radius: 10px;
+         width: 40rem;
+         height: 30rem;
+         background-image: url('../img/Screenshot-2018-4-16 Centrum ogrodnicze Lawenda.jpg');
+         background-blend-mode: color;
+         background-size: cover;
+         background-position: center center;
+         box-shadow: 3px 3px 3px rgba(black, .3);
+         cursor: pointer;
+         
+         &:hover {
+            filter: blur(3px) brightness(80%);
+         }
+      }
+
+      &__recipes {
+         border: 5px solid $color-primary-5;
+         border-radius: 10px;
+         width: 40rem;
+         height: 30rem;
+         background-image: url('../img/Screenshot-2018-4-16 Recipes app.png');
+         background-size: 100%;                             
+         background-position: center center;
+         box-shadow: 3px 3px 3px rgba(black, .3);  
+         cursor: pointer;  
+         &:hover {
+            filter: blur(3px) brightness(80%);
+         }
+      }
+
+      &__game {
+         border: 5px solid $color-primary-5;
+         border-radius: 10px;
+         width: 40rem;
+         height: 30rem;
+         background-image: url('../img/Screenshot-2018-4-16 Recipes app.png');
+         background-size: 100%;                              
+         background-position: center center; 
+         box-shadow: 3px 3px 3px rgba(black, .3);
+         cursor: pointer;
+         &:hover {
+            filter: blur(3px) brightness(80%);
+         }
+      }
+   }
+
+}

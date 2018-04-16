@@ -117,7 +117,9 @@ body {
   .heading-secondary--about {
     color: #2E3A87; }
   .heading-secondary--skills {
-    color: white;
+    color: white; }
+  .heading-secondary--projects {
+    color: #FF9F68;
     flex: 100%; }
 
 .heading-tertiary {
@@ -126,9 +128,8 @@ body {
   text-transform: uppercase; }
 
 .paragraph {
-  font-size: 1.6rem; }
-  .paragraph:not(:last-child) {
-    margin-bottom: 3rem; }
+  font-size: 1.6rem;
+  flex: 100%; }
 
 .heading-loader {
   font-size: 6rem;
@@ -172,15 +173,10 @@ body {
     display: none !important; } }
 
 .about {
-  height: 100vh;
   display: flex;
   align-items: center; }
   .about__container {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    justify-content: space-between; }
   .about__photo {
     border: 3px solid white;
     border-radius: 50%;
@@ -237,51 +233,136 @@ body {
         bottom: -4px;
         left: -4px; }
 
-.skills__container {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 80%;
-  margin: 0 auto;
+.skills {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  flex-wrap: wrap;
-  opacity: 1;
-  transition: opacity 1.5s ease; }
+  align-items: center; }
+  .skills__container {
+    justify-content: space-around;
+    flex-wrap: wrap; }
+  .skills__main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 6rem;
+    flex: 100%;
+    flex-wrap: wrap; }
+    .skills__main__icon {
+      margin-left: calc(16.5% - 3rem);
+      margin-right: calc(16.5% - 3rem);
+      margin-top: 6rem;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+      position: relative;
+      cursor: pointer; }
+    .skills__main__label {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      border-radius: 5px;
+      -webkit-clip-path: polygon(100% 0%, 100% 48%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+      clip-path: polygon(100% 0%, 100% 48%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+      text-align: center;
+      font-size: 1.4rem;
+      transition: all 0.5s; }
+      .skills__main__label__p {
+        color: #FF9F68;
+        font-size: 1.4rem;
+        position: relative;
+        top: 50%;
+        transform: translate(5%, -55%);
+        text-shadow: none;
+        display: none; }
+    .skills__main__icon:hover .skills__main__label {
+      width: 10rem;
+      height: 6rem;
+      opacity: 1;
+      left: 120%;
+      backface-visibility: hidden; }
+    .skills__main__icon:hover .skills__main__label__p {
+      display: inline-block; }
+  .skills__learning {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 6rem;
+    flex: 100%;
+    flex-wrap: wrap; }
+    .skills__learning__icon {
+      margin-left: calc(25% - 3rem);
+      margin-right: calc(25% - 3rem);
+      margin-top: 4rem;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+      cursor: pointer; }
+    .skills__learning__label {
+      width: 10rem;
+      height: 5rem;
+      background-color: white; }
 
-.skills__main {
+.projects {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: white;
-  font-size: 6rem;
-  flex: 100%;
-  flex-wrap: wrap; }
-  .skills__main--icon {
-    margin-left: calc(16.5% - 3rem);
-    margin-right: calc(16.5% - 3rem);
-    margin-top: 6rem;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
-
-.skills__learning {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: white;
-  font-size: 6rem;
-  flex: 100%;
-  flex-wrap: wrap; }
-  .skills__learning--icon {
-    margin-left: calc(25% - 3rem);
-    margin-right: calc(25% - 3rem);
-    margin-top: 4rem;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
+  align-items: center; }
+  .projects__container {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center; }
+  .projects__github {
+    font-size: 10rem;
+    margin-top: 3rem;
+    color: #FF9F68; }
+    .projects__github:hover {
+      cursor: pointer; }
+  .projects__presentation {
+    flex: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .projects__presentation__lawenda {
+      border: 5px solid #FF9F68;
+      border-radius: 10px;
+      width: 40rem;
+      height: 30rem;
+      background-image: url("../img/Screenshot-2018-4-16 Centrum ogrodnicze Lawenda.jpg");
+      background-blend-mode: color;
+      background-size: cover;
+      background-position: center center;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+      cursor: pointer; }
+      .projects__presentation__lawenda:hover {
+        filter: blur(3px) brightness(80%); }
+    .projects__presentation__recipes {
+      border: 5px solid #FF9F68;
+      border-radius: 10px;
+      width: 40rem;
+      height: 30rem;
+      background-image: url("../img/Screenshot-2018-4-16 Recipes app.png");
+      background-size: 100%;
+      background-position: center center;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+      cursor: pointer; }
+      .projects__presentation__recipes:hover {
+        filter: blur(3px) brightness(80%); }
+    .projects__presentation__game {
+      border: 5px solid #FF9F68;
+      border-radius: 10px;
+      width: 40rem;
+      height: 30rem;
+      background-image: url("../img/Screenshot-2018-4-16 Recipes app.png");
+      background-size: 100%;
+      background-position: center center;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+      cursor: pointer; }
+      .projects__presentation__game:hover {
+        filter: blur(3px) brightness(80%); }
 
 .header {
   height: 100vh; }
 
 .container {
-  transition: opacity 1s ease; }
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  transition: opacity 1.5s ease; }
