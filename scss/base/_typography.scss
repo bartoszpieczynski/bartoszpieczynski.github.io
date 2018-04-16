@@ -1,0 +1,92 @@
+
+body {
+   font-family: sans-serif;
+   font-weight: 400;
+   line-height: 1.7;
+   color: black;   
+}
+
+.heading-primary {
+   color: white;
+   text-transform: uppercase;
+   backface-visibility: hidden;
+   margin-bottom: 6rem;
+
+   @include respond(tab-port) {
+       font-size: 3rem;
+   }
+
+   @include respond(phone) {
+       font-size: 2.5rem;
+   }
+
+
+
+   &--main {
+       display: block;
+       font-size: 6.5rem;
+       font-weight: 400;
+       letter-spacing: 2rem;
+       text-shadow: 2px 1px black;
+       
+       animation-name: moveInTop;
+       animation-duration: 3.5s;   
+
+       @include respond(phone) {
+           letter-spacing: 1rem;
+           font-size: 5rem;
+       }
+   }
+
+
+   &--sub {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    text-shadow: 2px 1px black;
+    
+    animation-name: moveInTop;
+    animation-duration: 1.5s;
+
+    @include respond(phone) {
+        letter-spacing: .5rem;
+    }
+}
+   
+}
+
+.heading-secondary-about {
+   font-size: 5rem;
+   text-transform: uppercase;
+   font-weight: 700;
+   letter-spacing: 2px;
+   color: #2E3A87;
+   text-shadow: 1px 1px 1px rgba(black, .3);
+}
+
+.heading-tertiary {
+   font-size: 1.6rem;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+.paragraph {
+   font-size: 1.6rem;
+   &:not(:last-child) {
+       margin-bottom: 3rem;
+   }
+}
+
+.heading-loader {
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: all .2s;
+    background-image: linear-gradient(to right, rgba(#D3CCE3, 0.7), rgba(#E9E4F0, 0.7));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
