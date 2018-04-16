@@ -1,40 +1,64 @@
-function backgroundTransition() {
-      var active = document.getElementsByClassName('active')[0].getAttribute('data-index');
-      if (active == 1) {
-            $('.about__text__eraser').css('border-color', '#2E3A87');
-            $('body').css('background-color', '#2E3A87');
-      } else if (active == 2) {
-            $('.about__text__eraser').css('border-color', '#73F7DD');
-            $('body').css('background-color', '#73F7DD');
-      } else if (active == 3) {
-            $('.about__text__eraser').css('border-color', '#1972A4');
-            $('body').css('background-color', '#1972A4');           
-      } else if (active == 4) {
-            $('body').css('background-color', '#2CC4CB');
-      } else if (active == 5) {
-            $('body').css('background-color', '#FF9F68');
-      }
+function oldActive() {
+  let active = parseInt(document
+    .getElementsByClassName("active")[0]
+    .getAttribute("data-index"));
+    return active;
 }
 
+function fadeSection() {
+  let active = parseInt(document
+    .getElementsByClassName("active")[0]
+    .getAttribute("data-index"));
+    if (active > 1 && active < 5) {
+          document.querySelector(`[data-containerid="${active - 1}"]`).style.opacity = "0";
+          document.querySelector(`[data-containerid="${active + 1}"]`).style.opacity = "0";
+          document.querySelector(`[data-containerid="${active}"]`).style.opacity = "1";
+    } else if (active === 1) {
+      document.querySelector(`[data-containerid="${active + 1}"]`).style.opacity = "0";
+      document.querySelector(`[data-containerid="${active}"]`).style.opacity = "1";
+    } else if (active === 5) {
+      document.querySelector(`[data-containerid="${active - 1}"]`).style.opacity = "0";
+      document.querySelector(`[data-containerid="${active}"]`).style.opacity = "1";
+    }
+}
 
+function backgroundTransition() {
+  let active = document
+    .getElementsByClassName("active")[0]
+    .getAttribute("data-index");
+  if (active == 1) {
+    $(".about__text__eraser").css("border-color", "#2E3A87");
+    $("body").css("background-color", "#2E3A87");
+  } else if (active == 2) {
+    $(".about__text__eraser").css("border-color", "#73F7DD");
+    $("body").css("background-color", "#73F7DD");
+  } else if (active == 3) {
+    $(".about__text__eraser").css("border-color", "#FF9F68");
+    $("body").css("background-color", "#FF9F68");
+  } else if (active == 4) {
+    $("body").css("background-color", "#2CC4CB");
+  } else if (active == 5) {
+    $("body").css("background-color", "#1972A4");
+  }
+}
 
 $(".main").onepage_scroll({
-   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-   // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
-   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-   beforeMove: function () {
-      backgroundTransition();
-   },  // This option accepts a callback function. The function will be called before the page moves.
-   afterMove: function (index) {
-
-   },   // This option accepts a callback function. The function will be called after the page moves.
-   loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-   keyboard: true,                  // You can activate the keyboard controls
-   responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
-   // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-   // the browser's width is less than 600, the fallback will kick in.
-   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+  sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
+  easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+  // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+  animationTime: 1500, // AnimationTime let you define how long each section takes to animate
+  pagination: true, // You can either show or hide the pagination. Toggle true for show, false for hide.
+  updateURL: false, // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+  beforeMove: function() {
+    backgroundTransition();
+    fadeSection();
+  }, // This option accepts a callback function. The function will be called before the page moves.
+  afterMove: function(index) {
+  }, // This option accepts a callback function. The function will be called after the page moves.
+  loop: false, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+  keyboard: true, // You can activate the keyboard controls
+  responsiveFallback: false, // You can fallback to normal page scroll by defining the width of the browser in which
+  // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+  // the browser's width is less than 600, the fallback will kick in.
+  direction: "vertical" // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
 });

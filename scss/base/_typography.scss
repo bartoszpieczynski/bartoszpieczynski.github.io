@@ -56,13 +56,22 @@ body {
    
 }
 
-.heading-secondary-about {
-   font-size: 5rem;
-   text-transform: uppercase;
-   font-weight: 700;
-   letter-spacing: 2px;
-   color: #2E3A87;
-   text-shadow: 1px 1px 1px rgba(black, .3);
+.heading-secondary{
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px rgba(black, .3);
+
+    &--about {
+        color: $color-primary-4;
+    }
+
+    &--skills {
+        color: white;
+        flex: 100%;
+    }
+
 }
 
 .heading-tertiary {

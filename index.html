@@ -7,6 +7,7 @@
 
       <link rel="stylesheet" href="css/jquery.scrollindicatorbullets.css">
       <link rel="stylesheet" href="css/onepage-scroll.css">
+      <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
       <link rel="stylesheet" href="css/style.css">
 
 
@@ -19,12 +20,15 @@
 <body>
       <div class="main">
             <section id="header" class="header">
+                  <div class="container header__container" data-containerid="1">
+                        <i class="flaticon-computer"></i>
+                  </div>
 
             </section>
             <main>
 
                   <section id="about" class="about">
-                        <div class="about__container">
+                        <div class="container about__container" data-containerid="2">
                               <div class="about__photo">
                                     <figure class="about__photo__shape">
                                           <img src="../img/ja.jpg" alt="#" class="about__photo__img">
@@ -39,7 +43,7 @@
                                     <div class="about__text__eraser about__text__eraser--bl"></div>
                                     <!-- KONIEC WYMAZYWANIA -->
 
-                                    <h2 class="heading-secondary-about">O mnie</h2>
+                                    <h2 class="heading-secondary heading-secondary--about">About me</h2>
                                     <p class="about__text__life">
                                           Lorem ipsum dolor sit amet consectetur adipisicing elit. In commodi minima ratione asperiores labore facere? Nostrum, nobis
                                           error eos veniam deserunt quod quis, saepe enim vitae ea pariatur sapiente ut.
@@ -56,14 +60,36 @@
                   </section>
 
                   <section id="skills" class="skills">
-                        
+                        <div class="container skills__container" data-containerid="3">
+                              <h2 class="heading-secondary heading-secondary--skills">My skills</h2>
+                              <div class="skills__main">
+                                    <i class="skills__main--icon devicon-javascript-plain"></i>
+                                    <i class="skills__main--icon devicon-css3-plain"></i>
+                                    <i class="skills__main--icon devicon-html5-plain-wordmark"></i>
+                                    <i class="skills__main--icon devicon-php-plain"></i>
+                                    <i class="skills__main--icon devicon-sass-original"></i>
+                                    <i class="skills__main--icon devicon-git-plain"></i>
+                                    <i class="skills__main--icon devicon-webpack-plain"></i>
+                                    <i class="skills__main--icon devicon-bootstrap-plain-wordmark"></i>
+                                    <i class="skills__main--icon devicon-jquery-plain-wordmark"></i>
+                              </div>
+                              <h2 class="heading-secondary heading-secondary--skills u-margin-top">Currently learning</h2>  
+                              <div class="skills__learning">
+                                    <i class="skills__learning--icon devicon-react-original-wordmark"></i>
+                                    <i class="skills__learning--icon devicon-jasmine-plain-wordmark"></i>
+                              </div>
+                        </div>                       
                   </section>
 
                   <section id="projects" class="projects">
+                        <div class="container projects__container" data-containerid="4">
 
+                        </div>
                   </section>
                   <section id="contact" class="contact">
-
+                        <div class="container contact__container" data-containerid="5">
+                              
+                        </div>
                   </section>
 
             </main>
@@ -72,12 +98,10 @@
             </footer>
       </div>
       <script src="js/jquery.min.js"></script>
-      <script src="js/jquery.waypoints.js"></script>
-      <script src="js/noframework.waypoints.min.js"></script>
       <script src="js/jquery.scrollindicatorbullets.min.js"></script>
       <script src="js/jquery.onepage-scroll.js"></script>
-      <script src="js/jquery.color.js"></script>
       <script src="js/onePageConfig.js"></script>
+      <script src="js/main.js"></script>
 
 
 
