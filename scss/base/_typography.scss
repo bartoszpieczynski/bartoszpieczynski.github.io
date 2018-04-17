@@ -1,6 +1,14 @@
 
+
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(../fonts/Ubuntu-Regular.ttf);
+  }
+
+  
 body {
-   font-family: sans-serif;
+   font-family: Ubuntu;
    font-weight: 400;
    line-height: 1.7;
    color: black;   
