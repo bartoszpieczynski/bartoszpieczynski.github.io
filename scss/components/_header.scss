@@ -1,0 +1,34 @@
+.header {
+   display: flex;
+   align-items: center;
+
+   &__container {
+      flex-wrap: wrap;
+      text-align: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+   }
+
+   &__computer {
+      animation: bounceInDown 1.5s;
+      position: relative;
+   }
+
+   &__text {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      color: $color-primary-4;
+      top: 40%;
+
+      &__smiley {
+         position: absolute;
+         top: 55%;
+         animation: fadeIn 10s ease-in;
+      }
+   }
+
+}

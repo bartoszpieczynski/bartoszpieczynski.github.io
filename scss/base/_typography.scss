@@ -33,32 +33,22 @@ body {
    &--main {
        display: block;
        font-size: 6.5rem;
-       font-weight: 400;
-       letter-spacing: 2rem;
-       text-shadow: 2px 1px black;
-       
-       animation-name: moveInTop;
-       animation-duration: 3.5s;   
+       font-weight: 400;  
 
        @include respond(phone) {
-           letter-spacing: 1rem;
            font-size: 5rem;
        }
    }
 
 
    &--sub {
-    display: block;
+    display: inline-block;
+    flex: 100%;
     font-size: 2.5rem;
     font-weight: 700;
-    letter-spacing: 1.75rem;
-    text-shadow: 2px 1px black;
     
-    animation-name: moveInTop;
-    animation-duration: 1.5s;
 
     @include respond(phone) {
-        letter-spacing: .5rem;
     }
 }
    
