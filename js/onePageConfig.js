@@ -30,13 +30,13 @@ function backgroundTransition() {
     $(".about__text__eraser").css("border-color", "#2E3A87");
     $("body").css("background-color", "#2E3A87");
   } else if (active == 2) {
-    $(".about__text__eraser").css("border-color", "#73F7DD");
-    $("body").css("background-color", "#73F7DD");
+    $(".about__text__eraser").css("border-color", "#0097A7");
+    $("body").css("background-color", "#0097A7");
   } else if (active == 3) {
-    $(".about__text__eraser").css("border-color", "#FF9F68");
-    $("body").css("background-color", "#FF9F68");
+    $(".about__text__eraser").css("border-color", "#00BCD4");
+    $("body").css("background-color", "#00BCD4");
   } else if (active == 4) {
-    $("body").css("background-color", "#2CC4CB");
+    $("body").css("background-color", "#009688");
   } else if (active == 5) {
     $("body").css("background-color", "#1972A4");
   }

@@ -115,11 +115,11 @@ body {
   letter-spacing: 2px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
   .heading-secondary--about {
-    color: #2E3A87; }
+    color: white; }
   .heading-secondary--skills {
     color: white; }
   .heading-secondary--projects {
-    color: #FF9F68;
+    color: white;
     flex: 100%; }
 
 .heading-tertiary {
@@ -202,7 +202,8 @@ body {
     padding-left: 12rem;
     padding-right: 5rem; }
     .about__text__life {
-      color: #2E3A87;
+      color: white;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
       font-size: 1.4rem;
       font-weight: 700;
       padding-top: 2rem;
@@ -311,51 +312,62 @@ body {
   .projects__github {
     font-size: 10rem;
     margin-top: 3rem;
-    color: #FF9F68; }
+    color: white; }
     .projects__github:hover {
       cursor: pointer; }
   .projects__presentation {
     flex: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center; }
-    .projects__presentation__lawenda {
-      border: 5px solid #FF9F68;
+    align-items: center;
+    flex-wrap: wrap; }
+    .projects__presentation__element {
+      border: 5px solid white;
       border-radius: 10px;
       width: 40rem;
       height: 30rem;
-      background-image: url("../img/Screenshot-2018-4-16 Centrum ogrodnicze Lawenda.jpg");
-      background-blend-mode: color;
-      background-size: cover;
-      background-position: center center;
       box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-      cursor: pointer; }
-      .projects__presentation__lawenda:hover {
-        filter: blur(3px) brightness(80%); }
-    .projects__presentation__recipes {
-      border: 5px solid #FF9F68;
-      border-radius: 10px;
-      width: 40rem;
-      height: 30rem;
-      background-image: url("../img/Screenshot-2018-4-16 Recipes app.png");
-      background-size: 100%;
-      background-position: center center;
-      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-      cursor: pointer; }
-      .projects__presentation__recipes:hover {
-        filter: blur(3px) brightness(80%); }
-    .projects__presentation__game {
-      border: 5px solid #FF9F68;
-      border-radius: 10px;
-      width: 40rem;
-      height: 30rem;
-      background-image: url("../img/Screenshot-2018-4-16 Recipes app.png");
-      background-size: 100%;
-      background-position: center center;
-      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-      cursor: pointer; }
-      .projects__presentation__game:hover {
-        filter: blur(3px) brightness(80%); }
+      position: relative; }
+      .projects__presentation__element--lawenda--caption {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-image: url("../img/Screenshot-2018-4-16 Centrum ogrodnicze Lawenda.jpg");
+        background-size: cover;
+        background-position: center center;
+        transition: all 0.5s; }
+      .projects__presentation__element--lawenda:hover .btn {
+        opacity: 1; }
+      .projects__presentation__element--lawenda:hover .projects__presentation__element--lawenda--caption {
+        filter: blur(1px) brightness(60%); }
+      .projects__presentation__element--recipes--caption {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-image: url("../img/Screenshot-2018-4-16 Recipes app.png");
+        background-size: cover;
+        background-position: center center; }
+      .projects__presentation__element--recipes:hover .btn {
+        opacity: 1; }
+      .projects__presentation__element--recipes:hover .projects__presentation__element--recipes--caption {
+        filter: blur(1px) brightness(60%); }
+      .projects__presentation__element--game--caption {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-image: url("../img/Screenshot-2018-4-16 Pig Game.jpg");
+        background-size: cover;
+        background-position: center center; }
+      .projects__presentation__element--game:hover .btn {
+        opacity: 1; }
+      .projects__presentation__element--game:hover .projects__presentation__element--game--caption {
+        filter: blur(1px) brightness(60%); }
 
 .header {
   height: 100vh; }
@@ -366,3 +378,33 @@ body {
   display: flex;
   align-items: center;
   transition: opacity 1.5s ease; }
+
+.btn {
+  z-index: 100;
+  position: absolute;
+  border: none;
+  width: 8rem;
+  height: 4rem;
+  border-radius: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+  background-color: #009688;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  transition: all .5s; }
+  .btn:hover {
+    transform: translateY(-60%);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.4); }
+  .btn:active {
+    transform: translateY(-50%);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.4); }
+  .btn:focus {
+    outline: none; }
+  .btn--code {
+    margin-right: 4rem;
+    right: 50%; }
+  .btn--project {
+    margin-left: 4rem;
+    left: 50%; }
