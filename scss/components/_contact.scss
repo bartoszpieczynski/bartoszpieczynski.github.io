@@ -11,6 +11,11 @@
     padding-bottom: 10rem;
     border-radius: 10px;
     box-shadow: 3px 3px rgba(black, .4);
+
+    @include respond(phone) {
+      padding: 3rem 4rem;
+    }
+
   }
 
   &__right {
@@ -31,6 +36,8 @@
      justify-content: center;
      align-content: center;
      align-self: flex-start;
+
+
   }
 
   &__form {
@@ -51,12 +58,17 @@
     box-shadow: 3px 3px 3px rgba($color-primary-3, 0.3);
     border-color: $color-primary-3;
 
+
     &--textarea {
       margin-top: 0.5rem;
       border-radius: 10px;
       resize: none;
       padding-left: 1rem;
       height: auto;
+
+      @include respond(phone) {
+        height: 10rem;
+      }
     }
 
     &:focus {
@@ -119,6 +131,7 @@
      text-shadow: 4px 4px rgba($color-primary-3, .3);
      transition: all .5s;
      cursor: pointer;
+     text-decoration: none;
 
      &:hover {
       transform: translateY(-10%);

@@ -425,7 +425,8 @@ body {
   .projects__github {
     font-size: 10rem;
     margin-top: 3rem;
-    color: white; }
+    color: white;
+    text-decoration: none; }
     .projects__github:hover {
       cursor: pointer; }
   .projects__presentation {
@@ -497,6 +498,9 @@ body {
     padding-bottom: 10rem;
     border-radius: 10px;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.4); }
+    @media only screen and (max-width: 37.5em) {
+      .contact__container {
+        padding: 3rem 4rem; } }
   .contact__right {
     flex: 30%;
     margin-left: 10%;
@@ -534,6 +538,9 @@ body {
       resize: none;
       padding-left: 1rem;
       height: auto; }
+      @media only screen and (max-width: 37.5em) {
+        .contact__input--textarea {
+          height: 10rem; } }
     .contact__input:focus {
       outline: none;
       border-bottom: 5px solid #0cbe47; }
@@ -575,7 +582,8 @@ body {
     color: white;
     text-shadow: 4px 4px rgba(25, 114, 164, 0.3);
     transition: all .5s;
-    cursor: pointer; }
+    cursor: pointer;
+    text-decoration: none; }
     .contact__icon:hover {
       transform: translateY(-10%);
       text-shadow: 7px 7px rgba(25, 114, 164, 0.3); }
