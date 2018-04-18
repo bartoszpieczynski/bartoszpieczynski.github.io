@@ -28,7 +28,7 @@
 
 
 .not-mobile {
-  @media only screen and (max-width: 56.25em){
+  @media only screen and (max-width: 75em){
     display: none!important;
   }
 }
@@ -38,3 +38,10 @@
     display: none!important;
   }
 }
+
+.only-touch{
+  @media only screen and (min-width: 75.1em){
+    display: none!important;
+  }
+}
+
