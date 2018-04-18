@@ -1,12 +1,3 @@
-{
-   let icon = document.querySelector(".contact__right");
-
-   icon.addEventListener("click", function(e)
-   {
-     window.open(e.target.dataset.link, "_blank")
-   });
-}
-
 let typed = new Typed('#header-1', {
    startDelay: 2000,
    strings: [`Hello!`, "Welcome to  <br class='only-mobile'/> my worl", `Welcome to<br class='only-mobile'/> my portfolio.`],

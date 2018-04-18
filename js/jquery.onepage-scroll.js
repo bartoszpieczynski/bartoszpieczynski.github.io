@@ -48,6 +48,9 @@
         if (
           touchedObject.nodeName == "A" ||
           touchedObject.nodeName == "LABEL" ||
+          touchedObject.nodeName == "INPUT" ||
+          touchedObject.nodeName == "TEXTAREA" ||
+          touchedObject.nodeName == "I" ||
           touchedObject.nodeName == "SPAN"
         ) {
           $(touchedObject).click();
@@ -59,6 +62,9 @@
               $._data(touchedObject, "events").click != null) ||
             touchedObject.nodeName == "A" ||
             touchedObject.nodeName == "LABEL" ||
+            touchedObject.nodeName == "INPUT" ||
+            touchedObject.nodeName == "TEXTAREA" ||
+            touchedObject.nodeName == "I" ||
             touchedObject.nodeName == "SPAN"
           )
         ) {

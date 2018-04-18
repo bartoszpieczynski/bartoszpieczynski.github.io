@@ -1,11 +1,18 @@
 .skills {
   display: flex;
   align-items: center;
+  @include respond(phone) {
+    align-items: flex-start;
+  }
 
 
   &__container {
     justify-content: space-around;
     flex-wrap: wrap;
+
+    @include respond(phone) {
+      padding-top: 10%;
+    }
   }
 
   &__main {
@@ -24,6 +31,10 @@
       text-shadow: 1px 1px 1px rgba(black, 0.3);
       position: relative;
       cursor: pointer;
+
+      @include respond(phone) {
+        margin-top: 4rem;
+      }
     }
 
     &__label {
