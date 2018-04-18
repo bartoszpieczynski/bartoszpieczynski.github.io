@@ -12,6 +12,8 @@
    }
 
    &__computer {
+      width: 100%;
+      height: 90%;
       animation: bounceInDown 1.5s;
       position: relative;
    }

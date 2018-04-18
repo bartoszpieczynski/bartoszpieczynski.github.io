@@ -1,46 +1,4 @@
-function oldActive() {
-  let active = parseInt(document
-    .getElementsByClassName("active")[0]
-    .getAttribute("data-index"));
-    return active;
-}
 
-function fadeSection() {
-  let active = parseInt(document
-    .getElementsByClassName("active")[0]
-    .getAttribute("data-index"));
-    if (active > 1 && active < 5) {
-          document.querySelector(`[data-containerid="${active - 1}"]`).style.opacity = "0";
-          document.querySelector(`[data-containerid="${active + 1}"]`).style.opacity = "0";
-          document.querySelector(`[data-containerid="${active}"]`).style.opacity = "1";
-    } else if (active === 1) {
-      document.querySelector(`[data-containerid="${active + 1}"]`).style.opacity = "0";
-      document.querySelector(`[data-containerid="${active}"]`).style.opacity = "1";
-    } else if (active === 5) {
-      document.querySelector(`[data-containerid="${active - 1}"]`).style.opacity = "0";
-      document.querySelector(`[data-containerid="${active}"]`).style.opacity = "1";
-    }
-}
-
-function backgroundTransition() {
-  let active = document
-    .getElementsByClassName("active")[0]
-    .getAttribute("data-index");
-  if (active == 1) {
-    $(".about__text__eraser").css("border-color", "#2E3A87");
-    $("body").css("background-color", "#2E3A87");
-  } else if (active == 2) {
-    $(".about__text__eraser").css("border-color", "#0097A7");
-    $("body").css("background-color", "#0097A7");
-  } else if (active == 3) {
-    $(".about__text__eraser").css("border-color", "#00BCD4");
-    $("body").css("background-color", "#00BCD4");
-  } else if (active == 4) {
-    $("body").css("background-color", "#009688");
-  } else if (active == 5) {
-    $("body").css("background-color", "#1972A4");
-  }
-}
 
 $(".main").onepage_scroll({
   sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
