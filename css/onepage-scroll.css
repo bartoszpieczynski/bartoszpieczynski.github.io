@@ -72,7 +72,8 @@ body, .onepage-wrapper, html {
 }
 
 .disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
-  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
 }
 
 .disabled-onepage-scroll .onepage-wrapper .section {
