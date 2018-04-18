@@ -34,6 +34,9 @@ html {
 
 ::-webkit-scrollbar {
   display: none; }
+  @media only screen and (max-width: 43.75em) {
+    ::-webkit-scrollbar {
+      display: initial; } }
 
 body {
   box-sizing: border-box;

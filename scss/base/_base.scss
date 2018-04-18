@@ -25,6 +25,14 @@ html {
 
 ::-webkit-scrollbar { 
   display: none; 
+
+  @include respond(phone-land) {
+    display: initial;
+  }
+}
+
+@include respond(phone-land) {
+
 }
 
 body {
