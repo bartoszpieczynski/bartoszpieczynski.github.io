@@ -75,6 +75,10 @@
         border-radius: 10px;
         box-shadow: 2px 2px rgba(black, .3);
 
+        @include respond(phone) {
+          width: 12rem;
+        }
+
         &__p {
           color: $color-primary-5;
           font-size: 2rem;
