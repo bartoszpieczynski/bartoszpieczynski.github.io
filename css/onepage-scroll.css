@@ -73,7 +73,7 @@ body, .onepage-wrapper, html {
 
 .disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
   -webkit-overflow-scrolling: touch;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .disabled-onepage-scroll .onepage-wrapper .section {
