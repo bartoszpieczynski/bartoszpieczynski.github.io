@@ -2,8 +2,18 @@
   display: flex;
   align-items: center;
 
+  @include respond(phone-land) {
+    height: 110vh!important;
+    margin-top: 5rem;
+  }
+
   &__container {
     justify-content: space-between;
+
+    @include respond(phone-land) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 
   &__photo {
@@ -11,6 +21,10 @@
     border-radius: 50%;
     transform: translate(10%, -2rem);
     z-index: 5;
+
+    @include respond(phone-land) {
+      transform: translate(0, 0)
+    }
 
     &__shape {
       width: 25rem;
@@ -25,6 +39,10 @@
       height: 100%;
       transform: translate(-5rem, 4rem) scale(1.4);
       backface-visibility: hidden;
+
+      @include respond(phone-land) {
+        transform: translate(0, 0);
+      }
     }
   }
 
@@ -43,6 +61,22 @@
       font-size: 1.4rem;
       font-weight: 700;
       line-height: 3rem;
+
+      &--mobile {
+        width: 80%;
+        color: white;
+        text-shadow: 1px 1px 1px rgba(black, .3);
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 3rem;
+      }
+    }
+
+
+    &--mobile {
+      display: flex;
+      justify-content: center; 
+      margin-top: 5rem;
     }
 
     &__eraser {

@@ -222,6 +222,9 @@ body {
 .header {
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 43.75em) {
+    .header {
+      height: 120vh !important; } }
   .header__container {
     flex-wrap: wrap;
     text-align: center;
@@ -231,12 +234,13 @@ body {
     justify-content: center; }
   .header__computer {
     width: 100%;
-    height: 90%;
+    height: 100%;
     animation: bounceInDown 1.5s;
     position: relative; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 43.75em) {
       .header__computer {
-        width: 100%; } }
+        width: 100%;
+        padding-bottom: 20%; } }
   .header__text {
     position: absolute;
     display: flex;
@@ -244,6 +248,9 @@ body {
     flex-wrap: wrap;
     color: #2E3A87;
     top: 40%; }
+    @media only screen and (max-width: 43.75em) {
+      .header__text {
+        top: 30%; } }
     .header__text__smiley {
       position: absolute;
       top: 55%;
@@ -269,13 +276,24 @@ body {
 .about {
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 43.75em) {
+    .about {
+      height: 110vh !important;
+      margin-top: 5rem; } }
   .about__container {
     justify-content: space-between; }
+    @media only screen and (max-width: 43.75em) {
+      .about__container {
+        justify-content: center;
+        flex-wrap: wrap; } }
   .about__photo {
     border: 3px solid white;
     border-radius: 50%;
     transform: translate(10%, -2rem);
     z-index: 5; }
+    @media only screen and (max-width: 43.75em) {
+      .about__photo {
+        transform: translate(0, 0); } }
     .about__photo__shape {
       width: 25rem;
       height: 25rem;
@@ -287,6 +305,9 @@ body {
       height: 100%;
       transform: translate(-5rem, 4rem) scale(1.4);
       backface-visibility: hidden; }
+      @media only screen and (max-width: 43.75em) {
+        .about__photo__img {
+          transform: translate(0, 0); } }
   .about__text {
     position: relative;
     width: 80%;
@@ -302,6 +323,17 @@ body {
       font-size: 1.4rem;
       font-weight: 700;
       line-height: 3rem; }
+      .about__text__life--mobile {
+        width: 80%;
+        color: white;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 3rem; }
+    .about__text--mobile {
+      display: flex;
+      justify-content: center;
+      margin-top: 5rem; }
     .about__text__eraser {
       position: absolute;
       height: 3rem;
@@ -331,6 +363,9 @@ body {
 .skills {
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 43.75em) {
+    .skills {
+      height: 110vh !important; } }
   .skills__container {
     justify-content: space-around;
     flex-wrap: wrap; }
@@ -381,13 +416,14 @@ body {
           .skills__main__label--mobile {
             width: 10rem; } }
         .skills__main__label--mobile__p {
-          color: #00BCD4;
+          color: #1972A4;
           font-size: 2rem;
           padding-top: .3rem; }
           @media only screen and (max-width: 37.5em) {
             .skills__main__label--mobile__p {
               padding-top: .6rem;
-              font-size: 1.5rem; } }
+              font-size: 1.5rem;
+              color: #2E3A87; } }
       .skills__main__label__p {
         color: #00BCD4;
         font-size: 1.4rem;
@@ -426,6 +462,9 @@ body {
 .projects {
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 43.75em) {
+    .projects {
+      height: 110vh !important; } }
   .projects__container {
     justify-content: center;
     flex-wrap: wrap;
@@ -498,6 +537,9 @@ body {
 .contact {
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 43.75em) {
+    .contact {
+      height: 110vh !important; } }
   .contact__container {
     justify-content: space-around;
     flex-wrap: wrap;
@@ -565,7 +607,7 @@ body {
   .contact__button {
     border: none;
     height: 4rem;
-    width: 8rem;
+    width: 15rem;
     margin-top: 2rem;
     background-color: white;
     border-radius: 10px;
