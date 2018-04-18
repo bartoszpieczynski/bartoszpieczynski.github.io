@@ -41,6 +41,10 @@ body {
   transition: background-color 1.5s;
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png"); }
 
+@media only screen and (max-width: 56.25em) {
+  .rwd-break {
+    display: none; } }
+
 @keyframes moveInTop {
   0% {
     transform: translateY(-3rem);
@@ -199,7 +203,7 @@ body {
   .not-mobile {
     display: none !important; } }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 37.5em) {
   .only-mobile {
     display: none !important; } }
 
@@ -218,6 +222,9 @@ body {
     height: 90%;
     animation: bounceInDown 1.5s;
     position: relative; }
+    @media only screen and (max-width: 37.5em) {
+      .header__computer {
+        width: 100%; } }
   .header__text {
     position: absolute;
     display: flex;
@@ -229,6 +236,23 @@ body {
       position: absolute;
       top: 55%;
       animation: fadeIn 10s ease-in; }
+      @media only screen and (max-width: 75em) {
+        .header__text__smiley {
+          top: 50%; } }
+      @media only screen and (max-width: 56.25em) {
+        .header__text__smiley {
+          max-width: 90px; } }
+      @media only screen and (max-width: 37.5em) {
+        .header__text__smiley {
+          display: none; } }
+
+@media only screen and (max-width: 1340px) {
+  #header-2 {
+    font-size: 2.3rem; } }
+
+@media only screen and (max-width: 75em) {
+  #header-2 {
+    display: none; } }
 
 .about {
   display: flex;
@@ -247,6 +271,7 @@ body {
       border-radius: 50%;
       border-radius: none; }
     .about__photo__img {
+      width: 100%;
       height: 100%;
       transform: translate(-5rem, 4rem) scale(1.4);
       backface-visibility: hidden; }
@@ -523,15 +548,15 @@ body {
       align-self: flex-end;
       margin-top: 10rem; }
 
-.header {
-  height: 100vh; }
-
 .container {
   width: 80%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   transition: opacity 1.5s ease; }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      width: 100%; } }
 
 .btn {
   z-index: 100;

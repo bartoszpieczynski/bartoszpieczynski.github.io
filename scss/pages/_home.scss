@@ -4,6 +4,10 @@
    display: flex;
    align-items: center;
    transition: opacity 1.5s ease;
+
+   @include respond(tab-port) {
+      width: 100%;
+   }
 }
 
 .btn {

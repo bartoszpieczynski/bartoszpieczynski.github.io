@@ -9,7 +9,7 @@
 
 let typed = new Typed('#header-1', {
    startDelay: 2000,
-   strings: [`Hello!`, "Welcome to my worl", `Welcome to my portfolio.`],
+   strings: [`Hello!`, "Welcome to  <br class='only-mobile'/> my worl", `Welcome to<br class='only-mobile'/> my portfolio.`],
    typeSpeed: 50,
    backSpeed: 10,
    smartBackspace: true,
