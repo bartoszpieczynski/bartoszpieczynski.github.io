@@ -12,9 +12,16 @@
     border-radius: 10px;
     box-shadow: 3px 3px rgba(black, .4);
 
+
+    @media only screen and (max-height: 531px) {
+      padding: 1rem 3rem;
+    }
+
     @include respond(phone) {
       padding: 3rem 4rem;
     }
+
+
 
   }
 
@@ -36,6 +43,8 @@
      justify-content: center;
      align-content: center;
      align-self: flex-start;
+
+     
 
 
   }

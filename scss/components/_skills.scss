@@ -18,9 +18,13 @@
     flex: 100%;
     flex-wrap: wrap;
 
+
+
     @include respond(phone) {
       padding-bottom: 4rem;
     }
+
+
 
     &__icon {
       margin-left: calc(16.5% - 3rem);

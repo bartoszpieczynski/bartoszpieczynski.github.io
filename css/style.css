@@ -203,6 +203,14 @@ body {
   .not-mobile {
     display: none !important; } }
 
+@media only screen and (max-width: 37.5em) {
+  .not-phone {
+    display: none !important; } }
+
+@media only screen and (max-height: 530px) {
+  .not-phone-landscape {
+    display: none !important; } }
+
 @media only screen and (min-width: 37.5em) {
   .only-mobile {
     display: none !important; } }
@@ -498,6 +506,9 @@ body {
     padding-bottom: 10rem;
     border-radius: 10px;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.4); }
+    @media only screen and (max-height: 531px) {
+      .contact__container {
+        padding: 1rem 3rem; } }
     @media only screen and (max-width: 37.5em) {
       .contact__container {
         padding: 3rem 4rem; } }
