@@ -2,10 +2,6 @@
   display: flex;
   align-items: center;
 
-  @include respond(phone-land) {
-    height: 110vh!important;
-    margin-top: 5rem;
-  }
 
   &__container {
     justify-content: space-between;

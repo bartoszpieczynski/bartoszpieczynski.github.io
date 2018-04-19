@@ -50,20 +50,18 @@ function oldActive() {
      return active;
  }
  
- function fadeSection() {
-   let active = parseInt(document
-     .getElementsByClassName("active")[0]
-     .getAttribute("data-index"));
-     if (active > 1 && active < 5) {
-           document.querySelector(`[data-containerid="${active - 1}"]`).style.opacity = "0";
-           document.querySelector(`[data-containerid="${active + 1}"]`).style.opacity = "0";
-           document.querySelector(`[data-containerid="${active}"]`).style.opacity = "1";
-     } else if (active === 1) {
-       document.querySelector(`[data-containerid="${active + 1}"]`).style.opacity = "0";
-       document.querySelector(`[data-containerid="${active}"]`).style.opacity = "1";
-     } else if (active === 5) {
-       document.querySelector(`[data-containerid="${active - 1}"]`).style.opacity = "0";
-       document.querySelector(`[data-containerid="${active}"]`).style.opacity = "1";
+ function fadeSection(nextIndex) {
+
+     if (nextIndex > 1 && nextIndex < 5) {
+           document.querySelector(`[data-containerid="${nextIndex - 1}"]`).style.opacity = "0";
+           document.querySelector(`[data-containerid="${nextIndex + 1}"]`).style.opacity = "0";
+           document.querySelector(`[data-containerid="${nextIndex}"]`).style.opacity = "1";
+     } else if (nextIndex === 1) {
+       document.querySelector(`[data-containerid="${nextIndex + 1}"]`).style.opacity = "0";
+       document.querySelector(`[data-containerid="${nextIndex}"]`).style.opacity = "1";
+     } else if (nextIndex === 5) {
+       document.querySelector(`[data-containerid="${nextIndex - 1}"]`).style.opacity = "0";
+       document.querySelector(`[data-containerid="${nextIndex}"]`).style.opacity = "1";
      }
  }
  

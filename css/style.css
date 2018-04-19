@@ -225,9 +225,6 @@ body {
 .header {
   display: flex;
   align-items: center; }
-  @media only screen and (max-width: 43.75em) {
-    .header {
-      height: 120vh !important; } }
   .header__container {
     flex-wrap: wrap;
     text-align: center;
@@ -250,17 +247,17 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     color: #2E3A87;
-    top: 40%; }
+    top: 20%; }
     @media only screen and (max-width: 43.75em) {
       .header__text {
-        top: 30%; } }
+        top: 10%; } }
     .header__text__smiley {
       position: absolute;
-      top: 55%;
+      top: 50%;
       animation: fadeIn 10s ease-in; }
       @media only screen and (max-width: 75em) {
         .header__text__smiley {
-          top: 50%; } }
+          top: 35%; } }
       @media only screen and (max-width: 56.25em) {
         .header__text__smiley {
           max-width: 90px; } }
@@ -279,10 +276,6 @@ body {
 .about {
   display: flex;
   align-items: center; }
-  @media only screen and (max-width: 43.75em) {
-    .about {
-      height: 110vh !important;
-      margin-top: 5rem; } }
   .about__container {
     justify-content: space-between; }
     @media only screen and (max-width: 43.75em) {
@@ -366,9 +359,6 @@ body {
 .skills {
   display: flex;
   align-items: center; }
-  @media only screen and (max-width: 43.75em) {
-    .skills {
-      height: 110vh !important; } }
   .skills__container {
     justify-content: space-around;
     flex-wrap: wrap; }
@@ -426,7 +416,7 @@ body {
             .skills__main__label--mobile__p {
               padding-top: .6rem;
               font-size: 1.5rem;
-              color: #2E3A87; } }
+              color: #00BCD4; } }
       .skills__main__label__p {
         color: #00BCD4;
         font-size: 1.4rem;
@@ -465,9 +455,6 @@ body {
 .projects {
   display: flex;
   align-items: center; }
-  @media only screen and (max-width: 43.75em) {
-    .projects {
-      height: 110vh !important; } }
   .projects__container {
     justify-content: center;
     flex-wrap: wrap;
@@ -540,9 +527,6 @@ body {
 .contact {
   display: flex;
   align-items: center; }
-  @media only screen and (max-width: 43.75em) {
-    .contact {
-      height: 110vh !important; } }
   .contact__container {
     justify-content: space-around;
     flex-wrap: wrap;

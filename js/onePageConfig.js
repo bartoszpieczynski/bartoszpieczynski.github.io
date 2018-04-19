@@ -4,9 +4,9 @@ $(document).ready(function() {
 		fitToSection: false,
 		slidesNavigation: true,
 		navigation: true,
-		responsiveWidth: 700,
+		responsiveWidth: 1500,
 		onLeave: function(index, nextIndex, direction){
-			fadeSection();
+			fadeSection(nextIndex);
 			backgroundTransition(nextIndex);
 		}
 	});

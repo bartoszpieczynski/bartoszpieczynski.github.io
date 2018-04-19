@@ -2,9 +2,7 @@
   display: flex;
   align-items: center;
 
-  @include respond(phone-land) {
-    height: 110vh!important;
-  }
+
 
   &__container {
     justify-content: center;

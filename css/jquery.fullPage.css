@@ -155,7 +155,7 @@ html.fp-enabled,
 .fp-slidesNav ul li:hover a.active span{
     height: 12px;
     width: 12px;
-    margin: -6px 0 0 -6px;
+    background: black;
     border-radius: 100%;
  }
 #fp-nav ul li a span,
@@ -163,10 +163,10 @@ html.fp-enabled,
     border-radius: 50%;
     position: absolute;
     z-index: 1;
-    height: 4px;
-    width: 4px;
+    height: 1rem;
+    width: 1rem;
     border: 0;
-    background: #333;
+    background: white;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;

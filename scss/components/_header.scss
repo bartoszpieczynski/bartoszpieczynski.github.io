@@ -2,10 +2,6 @@
    display: flex;
    align-items: center;
 
-   @include respond(phone-land) {
-    height: 120vh!important;
-  }
-
    &__container {
       flex-wrap: wrap;
       text-align: center;
@@ -34,21 +30,21 @@
       justify-content: center;
       flex-wrap: wrap;
       color: $color-primary-4;
-      top: 40%;
+      top: 20%;
 
       @include respond(phone-land) {
-        top: 30%;
+        top: 10%;
      }
 
 
 
       &__smiley {
          position: absolute;
-         top: 55%;
+         top: 50%;
          animation: fadeIn 10s ease-in;
 
          @include respond(tab-land) {            
-            top: 50%;
+            top: 35%;
          }
          
          @include respond(tab-port) {            
