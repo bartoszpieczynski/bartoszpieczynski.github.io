@@ -342,7 +342,8 @@ body {
     .about__text--mobile {
       display: flex;
       justify-content: center;
-      margin-top: 5rem; }
+      margin-top: 5rem;
+      min-height: 50vh; }
     .about__text__eraser {
       position: absolute;
       height: 3rem;
