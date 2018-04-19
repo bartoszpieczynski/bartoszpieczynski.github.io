@@ -99,22 +99,20 @@ function notResponsiveFade(nextIndex) {
 }
 
 const createText = () => {
-  const partOne = ` Hi! My name is Bartosz and I'm self-taught web developer. I started this adventure called web developing with PHP. In 2015
-  I was lucky enough to get accepted as an intern in LepszyProjekt. I learned
-  there basics of PHP and Symfony 1.4. During this time I was studying automation
-  and robotics at the West Pomeranian University of Technology.`;
-  const partTwo = `Two years later
-  I got hired in General Informatics LTD as junior backend developer. I learned
-  there how to use CSS3 and basics of JavaScript and jQuery. After few months
-  I was working on the backend as well as on the frontend. Also, I have been
-  entrusted with communicating with clients. I stayed there for almost a year.
-  While working in General Informatics I have grown more and more intrested
-  in JavaScript.`;
+  const partOne = ` Hi! My name is Bartosz and I'm self-taught web developer. In 2015 I was lucky enough to get accepted as an intern at LepszyProjekt.
+  There I learned basics of PHP and Symfony 1.4. During this time I was studying automation
+  and robotics at the West Pomeranian University of Technology.
+  Two years later I got hired in General Informatics LTD as junior backend developer. `;
+  const partTwo = `There I learned how to use CSS3 and basics of JavaScript and jQuery. After a few months,
+  I was working on the backend as well as on the frontend. I also have been entrusted 
+  with communicating with clients. I stayed there for almost a year.
+  While working in General Informatics I have become more and more intrested
+  in JavaScript.`; 
   const partThree = `At the end of 2017 I bought some books and online courses
-  and began to study hard. Right now I feel confident enough to start my new
-  adventure - React! But based on my experience I know that best way of learning
+  and began studying hard. Right now I feel confident enough to start my new
+  adventure - React! But based on my experience I know that the best way to learn
   programming is by doing it in real projects, that's why I sent you my CV.
-  I hope you will give me a chance to prove myself :)`;
+  I hope you will give me a chance to prove myself :)`; 
 
   const textArr = [partOne, partTwo, partThree];
   return textArr;

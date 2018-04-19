@@ -6,8 +6,10 @@
 
   &__container {
     justify-content: space-between;
+    height: 100%;
 
     @include respond(phone-land) {
+      flex-direction: column;
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -29,6 +31,11 @@
       overflow: hidden;
       border-radius: 50%;
       border-radius: none;
+
+      @include respond(phone-land) {
+        width: 15rem;
+        height: 15rem;
+      }
     }
 
     &__img {
@@ -64,13 +71,13 @@
 
       &--mobile {
         width: 80%;
-        height: 40vh;
         color: white;
         text-shadow: 1px 1px 1px rgba(black, .3);
         font-size: 2rem;
         font-weight: 700;
         line-height: 3rem;
         transition: opacity .5s;
+        margin-bottom: 2rem;
       }
     }
 
@@ -79,6 +86,7 @@
       display: flex;
       justify-content: center; 
       margin-top: 5rem;
+      
     }
 
     &__eraser {
