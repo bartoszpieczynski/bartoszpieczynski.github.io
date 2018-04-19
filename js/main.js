@@ -1,86 +1,149 @@
-let typed = new Typed('#header-1', {
-   startDelay: 2000,
-   strings: [`Hello!`, "Welcome to  <br class='only-mobile'/> my worl", `Welcome to<br class='only-mobile'/> my portfolio.`],
-   typeSpeed: 50,
-   backSpeed: 10,
-   smartBackspace: true,
-   showCursor: false
+const elements = {
+  textQuery: document.querySelector(".about__text .about__text__life"),
+  textQueryMobile: document.querySelector(".about__text--mobile"),
+  responsiveMode: document
+    .querySelector("body")
+    .classList.contains("fp-responsive"),
+  btnAbout: document.querySelector(".btn--about")
+};
+
+let typed = new Typed("#header-1", {
+  startDelay: 2000,
+  strings: [
+    `Hello!`,
+    "Welcome to  <br class='only-mobile'/> my worl",
+    `Welcome to<br class='only-mobile'/> my portfolio.`
+  ],
+  typeSpeed: 50,
+  backSpeed: 10,
+  smartBackspace: true,
+  showCursor: false
 });
 
-
-let typedSmall = new Typed('#header-2', {
-   startDelay: 7000,
-   strings: ['Scroll down to find out more about me.'],   
-   typeSpeed: 40,  
-   backSpeed: 10,
-   smartBackspace: true,
-   showCursor: false
+let typedSmall = new Typed("#header-2", {
+  startDelay: 7000,
+  strings: ["Scroll down to find out more about me."],
+  typeSpeed: 40,
+  backSpeed: 10,
+  smartBackspace: true,
+  showCursor: false
 });
-
-
-
-
-
 
 {
-   $('.skills__main__icon').on('mouseover', function() {
-      $(this).addClass('colored');
-   });
-   $('.skills__main__icon').on('mouseout', function() {
-      $(this).removeClass('colored');
-   });
-   $('.skills__learning__icon').on('mouseover', function() {
-      $(this).addClass('colored');
-   });
-   $('.skills__learning__icon').on('mouseout', function() {
-      $(this).removeClass('colored');
-   });
-   $('.projects__github--icon').on('mouseover', function() {
-      $(this).addClass('colored');
-   });
-   $('.projects__github--icon').on('mouseout', function() {
-      $(this).removeClass('colored');
-   });
+  $(".skills__main__icon").on("mouseover", function() {
+    $(this).addClass("colored");
+  });
+  $(".skills__main__icon").on("mouseout", function() {
+    $(this).removeClass("colored");
+  });
+  $(".skills__learning__icon").on("mouseover", function() {
+    $(this).addClass("colored");
+  });
+  $(".skills__learning__icon").on("mouseout", function() {
+    $(this).removeClass("colored");
+  });
+  $(".projects__github--icon").on("mouseover", function() {
+    $(this).addClass("colored");
+  });
+  $(".projects__github--icon").on("mouseout", function() {
+    $(this).removeClass("colored");
+  });
 }
 
-function oldActive() {
-   let active = parseInt(document
-     .getElementsByClassName("active")[0]
-     .getAttribute("data-index"));
-     return active;
- }
- 
- function fadeSection(nextIndex) {
+function fadeSection(index) {
+  if (index > 1 && index < 5) {
+    document.querySelector(`[data-containerid="${index - 1}"]`).style.opacity =
+      "0";
+    document.querySelector(`[data-containerid="${index + 1}"]`).style.opacity =
+      "0";
+    document.querySelector(`[data-containerid="${index}"]`).style.opacity = "1";
+  } else if (index === 1) {
+    document.querySelector(`[data-containerid="${index + 1}"]`).style.opacity =
+      "0";
+    document.querySelector(`[data-containerid="${index}"]`).style.opacity = "1";
+  } else if (index === 5) {
+    document.querySelector(`[data-containerid="${index - 1}"]`).style.opacity =
+      "0";
+    document.querySelector(`[data-containerid="${index}"]`).style.opacity = "1";
+  }
+}
 
-     if (nextIndex > 1 && nextIndex < 5) {
-           document.querySelector(`[data-containerid="${nextIndex - 1}"]`).style.opacity = "0";
-           document.querySelector(`[data-containerid="${nextIndex + 1}"]`).style.opacity = "0";
-           document.querySelector(`[data-containerid="${nextIndex}"]`).style.opacity = "1";
-     } else if (nextIndex === 1) {
-       document.querySelector(`[data-containerid="${nextIndex + 1}"]`).style.opacity = "0";
-       document.querySelector(`[data-containerid="${nextIndex}"]`).style.opacity = "1";
-     } else if (nextIndex === 5) {
-       document.querySelector(`[data-containerid="${nextIndex - 1}"]`).style.opacity = "0";
-       document.querySelector(`[data-containerid="${nextIndex}"]`).style.opacity = "1";
-     }
- }
- 
- function backgroundTransition(nextIndex) {
-   if (nextIndex == 1) {
-     $(".about__text__eraser").css("border-color", "#2E3A87");
-     $("body").css("background-color", "#2E3A87");
-   } else if (nextIndex == 2) {
-     $(".about__text__eraser").css("border-color", "#0097A7");
-     $("body").css("background-color", "#0097A7");
-   } else if (nextIndex == 3) {
-     $(".about__text__eraser").css("border-color", "#00BCD4");
-     $("body").css("background-color", "#00BCD4");
-   } else if (nextIndex == 4) {
-     $("body").css("background-color", "#009688");
-   } else if (nextIndex == 5) {
-     $("body").css("background-color", "#1972A4");
-   }
- }
+function backgroundTransition(nextIndex) {
+  if (nextIndex == 1) {
+    $(".about__text__eraser").css("border-color", "#2E3A87");
+    $("body").css("background-color", "#2E3A87");
+  } else if (nextIndex == 2) {
+    $(".about__text__eraser").css("border-color", "#0097A7");
+    $("body").css("background-color", "#0097A7");
+  } else if (nextIndex == 3) {
+    $(".about__text__eraser").css("border-color", "#00BCD4");
+    $("body").css("background-color", "#00BCD4");
+  } else if (nextIndex == 4) {
+    $("body").css("background-color", "#009688");
+  } else if (nextIndex == 5) {
+    $("body").css("background-color", "#1972A4");
+  }
+}
 
+function responsiveFade(index) {
+  if (elements.responsiveMode) {
+    fadeSection(index);
+  }
+}
 
+function notResponsiveFade(nextIndex) {
+  if (!elements.responsiveMode) {
+    fadeSection(nextIndex);
+  }
+}
 
+const createText = () => {
+  const partOne = ` Hi! My name is Bartosz and I'm self-taught web developer. I started this adventure called web developing with PHP. In 2015
+  I was lucky enough to get accepted as an intern in LepszyProjekt. I learned
+  there basics of PHP and Symfony 1.4. During this time I was studying automation
+  and robotics at the West Pomeranian University of Technology.`;
+  const partTwo = `Two years later
+  I got hired in General Informatics LTD as junior backend developer. I learned
+  there how to use CSS3 and basics of JavaScript and jQuery. After few months
+  I was working on the backend as well as on the frontend. Also, I have been
+  entrusted with communicating with clients. I stayed there for almost a year.
+  While working in General Informatics I have grown more and more intrested
+  in JavaScript.`;
+  const partThree = `At the end of 2017 I bought some books and online courses
+  and began to study hard. Right now I feel confident enough to start my new
+  adventure - React! But based on my experience I know that best way of learning
+  programming is by doing it in real projects, that's why I sent you my CV.
+  I hope you will give me a chance to prove myself :)`;
+
+  const textArr = [partOne, partTwo, partThree];
+  return textArr;
+};
+
+const renderText = (el, arr, i = 0) => {
+  el.insertAdjacentHTML('afterbegin', arr[i]);
+}
+
+const clearText = (el) => {
+  el.style.opacity = "0";
+  setTimeout(() => {
+    el.innerHTML = "";
+  }, 1000);
+}
+
+renderText(elements.textQuery, createText());
+let i = 1;
+
+const clickEvent = () => {
+  clearText(elements.textQuery);
+  setTimeout(() => {
+    elements.textQuery.style.opacity = "1";
+    if (i <= 2) {
+    renderText(elements.textQuery , createText(), i);
+    }
+    if (i === 2) {
+      i = -1;
+    }
+      return i++;
+}, 1000);
+}
+elements.btnAbout.addEventListener('click', clickEvent);

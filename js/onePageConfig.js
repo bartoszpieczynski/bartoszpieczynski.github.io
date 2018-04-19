@@ -5,9 +5,12 @@ $(document).ready(function() {
 		slidesNavigation: true,
 		navigation: true,
 		responsiveWidth: 1500,
+		afterLoad: function(anchorLink, index) {
+			responsiveFade(index);			
+		},
 		onLeave: function(index, nextIndex, direction){
-			fadeSection(nextIndex);
 			backgroundTransition(nextIndex);
+			notResponsiveFade(nextIndex)
 		}
 	});
 });

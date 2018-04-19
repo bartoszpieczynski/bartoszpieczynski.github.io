@@ -26,6 +26,16 @@
    opacity: 0;
    transition: all .5s;
 
+   &--about {
+      opacity: 1;
+      top: 80%;
+      left: 48%;
+      background-color: white;
+      color: #009688;
+      font-weight: 700;
+      width: 10rem;
+   }
+
    &:hover {
       transform: translateY(-60%);
       box-shadow: 4px 4px rgba(black, .4);

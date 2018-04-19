@@ -260,7 +260,8 @@ body {
           top: 35%; } }
       @media only screen and (max-width: 56.25em) {
         .header__text__smiley {
-          max-width: 90px; } }
+          max-width: 90px;
+          top: 25%; } }
       @media only screen and (max-width: 37.5em) {
         .header__text__smiley {
           display: none; } }
@@ -318,7 +319,10 @@ body {
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
       font-size: 1.4rem;
       font-weight: 700;
-      line-height: 3rem; }
+      line-height: 3rem;
+      padding-top: 5rem;
+      opacity: 1;
+      transition: opacity 1s; }
       .about__text__life--mobile {
         width: 80%;
         color: white;
@@ -656,6 +660,14 @@ body {
   cursor: pointer;
   opacity: 0;
   transition: all .5s; }
+  .btn--about {
+    opacity: 1;
+    top: 80%;
+    left: 48%;
+    background-color: white;
+    color: #009688;
+    font-weight: 700;
+    width: 10rem; }
   .btn:hover {
     transform: translateY(-60%);
     box-shadow: 4px 4px rgba(0, 0, 0, 0.4); }
