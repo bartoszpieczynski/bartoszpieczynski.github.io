@@ -1,10 +1,11 @@
 const elements = {
-  textQuery: document.querySelector(".about__text .about__text__life"),
-  textQueryMobile: document.querySelector(".about__text--mobile"),
+  textQuery: document.querySelector(".about__text__life"),
+  textQueryMobile: document.querySelector(".about__text__life--mobile"),
   responsiveMode: document
     .querySelector("body")
     .classList.contains("fp-responsive"),
-  btnAbout: document.querySelector(".btn--about")
+  btnAbout: document.querySelector(".btn--about"),
+  btnAboutMobile: document.querySelector(".btn--about--mobile")
 };
 
 let typed = new Typed("#header-1", {
@@ -131,6 +132,7 @@ const clearText = (el) => {
 }
 
 renderText(elements.textQuery, createText());
+renderText(elements.textQueryMobile, createText());
 let i = 1;
 
 const clickEvent = () => {
@@ -146,4 +148,20 @@ const clickEvent = () => {
       return i++;
 }, 1000);
 }
+
+const clickEventMobile = () => {
+  clearText(elements.textQueryMobile);
+  setTimeout(() => {
+    elements.textQueryMobile.style.opacity = "1";
+    if (i <= 2) {
+    renderText(elements.textQueryMobile , createText(), i);
+    }
+    if (i === 2) {
+      i = -1;
+    }
+      return i++;
+}, 1000);
+}
+
 elements.btnAbout.addEventListener('click', clickEvent);
+elements.btnAboutMobile.addEventListener('click', clickEventMobile);

@@ -1,6 +1,7 @@
 .about {
   display: flex;
   align-items: center;
+  height: 100vh;
 
 
   &__container {
@@ -63,11 +64,13 @@
 
       &--mobile {
         width: 80%;
+        height: 40vh;
         color: white;
         text-shadow: 1px 1px 1px rgba(black, .3);
         font-size: 2rem;
         font-weight: 700;
         line-height: 3rem;
+        transition: opacity .5s;
       }
     }
 

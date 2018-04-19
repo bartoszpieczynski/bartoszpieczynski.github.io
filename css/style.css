@@ -276,7 +276,8 @@ body {
 
 .about {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  height: 100vh; }
   .about__container {
     justify-content: space-between; }
     @media only screen and (max-width: 43.75em) {
@@ -322,14 +323,16 @@ body {
       line-height: 3rem;
       padding-top: 5rem;
       opacity: 1;
-      transition: opacity 1s; }
+      transition: opacity .5s; }
       .about__text__life--mobile {
         width: 80%;
+        height: 40vh;
         color: white;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
         font-size: 2rem;
         font-weight: 700;
-        line-height: 3rem; }
+        line-height: 3rem;
+        transition: opacity .5s; }
     .about__text--mobile {
       display: flex;
       justify-content: center;
@@ -668,6 +671,12 @@ body {
     color: #009688;
     font-weight: 700;
     width: 10rem; }
+    .btn--about--mobile {
+      top: 90%;
+      transform: translateX(-40%) !important; }
+      .btn--about--mobile:hover, .btn--about--mobile:active {
+        transform: translateY(0) !important;
+        transform: translateX(-40%) !important; }
   .btn:hover {
     transform: translateY(-60%);
     box-shadow: 4px 4px rgba(0, 0, 0, 0.4); }

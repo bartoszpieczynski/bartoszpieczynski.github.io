@@ -34,6 +34,18 @@
       color: #009688;
       font-weight: 700;
       width: 10rem;
+
+      &--mobile {
+         top: 90%;
+         transform: translateX(-40%)!important;
+
+         &:hover,
+         &:active {
+            transform: translateY(0)!important;
+            transform: translateX(-40%)!important;
+         }
+
+      }
    }
 
    &:hover {
