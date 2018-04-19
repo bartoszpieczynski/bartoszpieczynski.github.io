@@ -337,13 +337,12 @@ body {
         font-size: 2rem;
         font-weight: 700;
         line-height: 3rem;
-        transition: opacity .5s;
-        margin-bottom: 2rem; }
+        transition: opacity .5s; }
     .about__text--mobile {
       display: flex;
       justify-content: center;
       margin-top: 5rem;
-      min-height: 50vh; }
+      min-height: 55vh; }
     .about__text__eraser {
       position: absolute;
       height: 3rem;
