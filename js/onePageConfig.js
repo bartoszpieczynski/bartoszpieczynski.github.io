@@ -11,6 +11,9 @@ $(document).ready(function() {
 		onLeave: function(index, nextIndex, direction){
 			backgroundTransition(nextIndex);
 			notResponsiveFade(nextIndex)
+		},
+		afterResize: function(){
+			location.reload();
 		}
 	});
 });
