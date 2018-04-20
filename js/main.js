@@ -1,3 +1,6 @@
+
+
+
 const elements = {
   textQuery: document.querySelector(".about__text__life"),
   textQueryMobile: document.querySelector(".about__text__life--mobile"),

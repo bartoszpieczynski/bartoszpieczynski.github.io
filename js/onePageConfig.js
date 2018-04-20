@@ -4,7 +4,7 @@ $(document).ready(function() {
 		fitToSection: false,
 		slidesNavigation: true,
 		navigation: true,
-		responsiveWidth: 1500,
+		responsiveWidth: 720,
 		afterLoad: function(anchorLink, index) {
 			responsiveFade(index);			
 		},

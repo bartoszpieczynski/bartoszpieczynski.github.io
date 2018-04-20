@@ -36,7 +36,15 @@
       width: 10rem;
 
       &--mobile {
-         position: initial;
+         width: 10rem;
+         height: 4rem;
+         border-radius: 5px;
+         background-color: white;
+         color: #009688;
+         font-weight: 700;
+         border: none;
+         box-shadow: 2px 2px rgba(black, .4);
+         margin-top: 2rem;
 
          &:hover,
          &:active {
