@@ -44,12 +44,12 @@
          animation: fadeIn 10s ease-in;
 
          @include respond(tab-land) {            
-            top: 35%;
+            top: 30%;
+            animation: fadeIn 7s ease-in;
          }
          
          @include respond(tab-port) {            
             max-width: 90px;
-            top: 25%;
          }
 
          @include respond(phone) {

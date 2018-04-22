@@ -45,6 +45,12 @@
   }
 }
 
+.not-tab-port {
+  @media only screen and (max-width: 56.25em){
+    display: none!important;
+  }
+}
+
 .only-mobile {
   @media only screen and (min-width: 37.5em){
     display: none!important;

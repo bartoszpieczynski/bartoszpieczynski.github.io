@@ -8,8 +8,11 @@ const elements = {
     .querySelector("body")
     .classList.contains("fp-responsive"),
   btnAbout: document.querySelector(".btn--about"),
-  btnAboutMobile: document.querySelector(".btn--about--mobile")
+  btnAboutMobile: document.querySelector(".btn--about--mobile"),
+  loader: document.querySelector(".loader-wrapper")
 };
+
+//TYPED CONFIG
 
 let typed = new Typed("#header-1", {
   startDelay: 2000,
@@ -33,26 +36,20 @@ let typedSmall = new Typed("#header-2", {
   showCursor: false
 });
 
+
+
+
+//ICON COLORED VERSION
 {
-  $(".skills__main__icon").on("mouseover", function() {
+  $(".js-color").on("mouseover", function() {
     $(this).addClass("colored");
   });
-  $(".skills__main__icon").on("mouseout", function() {
-    $(this).removeClass("colored");
-  });
-  $(".skills__learning__icon").on("mouseover", function() {
-    $(this).addClass("colored");
-  });
-  $(".skills__learning__icon").on("mouseout", function() {
-    $(this).removeClass("colored");
-  });
-  $(".projects__github--icon").on("mouseover", function() {
-    $(this).addClass("colored");
-  });
-  $(".projects__github--icon").on("mouseout", function() {
+  $(".js-color").on("mouseout", function() {
     $(this).removeClass("colored");
   });
 }
+
+//FADE SECTIONS
 
 function fadeSection(index) {
   if (index > 1 && index < 5) {
@@ -72,6 +69,8 @@ function fadeSection(index) {
   }
 }
 
+//BACKGROUND COLORS
+
 function backgroundTransition(nextIndex) {
   if (nextIndex == 1) {
     $(".about__text__eraser").css("border-color", "#2E3A87");
@@ -89,17 +88,23 @@ function backgroundTransition(nextIndex) {
   }
 }
 
+//Fade function based on fullPage mode
+
 function responsiveFade(index) {
   if (elements.responsiveMode) {
     fadeSection(index);
   }
 }
 
+//Fade function based on fullPage mode
+
 function notResponsiveFade(nextIndex) {
   if (!elements.responsiveMode) {
     fadeSection(nextIndex);
   }
 }
+
+//About markup
 
 const createText = () => {
   const partOne = ` Hi! My name is Bartosz and I'm self-taught web developer. In 2015 I was lucky enough to get accepted as an intern at LepszyProjekt.
@@ -121,9 +126,14 @@ const createText = () => {
   return textArr;
 };
 
+
+//About render
+
 const renderText = (el, arr, i = 0) => {
   el.insertAdjacentHTML('afterbegin', arr[i]);
 }
+
+//About text clear
 
 const clearText = (el) => {
   el.style.opacity = "0";
@@ -135,6 +145,9 @@ const clearText = (el) => {
 renderText(elements.textQuery, createText());
 renderText(elements.textQueryMobile, createText());
 let i = 1;
+
+
+//About button event
 
 const clickEvent = () => {
   clearText(elements.textQuery);
@@ -149,6 +162,8 @@ const clickEvent = () => {
       return i++;
 }, 1000);
 }
+
+//About button event on mobiles
 
 const clickEventMobile = () => {
   clearText(elements.textQueryMobile);
@@ -166,3 +181,10 @@ const clickEventMobile = () => {
 
 elements.btnAbout.addEventListener('click', clickEvent);
 elements.btnAboutMobile.addEventListener('click', clickEventMobile);
+
+
+const hideLoader = () => {
+  elements.loader.style.display = "none";
+}
+
+window.onload = hideLoader();

@@ -19,7 +19,9 @@
     flex: 100%;
     flex-wrap: wrap;
 
-
+    @include respond(tab-land) {
+      margin-bottom: 3rem;
+    }
 
     @include respond(phone) {
       padding-bottom: 4rem;
@@ -85,7 +87,7 @@
         }
 
         &__p {
-          color: $color-primary-3;
+          color: $color-primary-5;
           font-size: 2rem;
           padding-top: .3rem;
 

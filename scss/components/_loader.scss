@@ -1,0 +1,24 @@
+.loader-wrapper {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background: $color-primary-4;
+   display: flex;
+   z-index: 500;
+   position: relative;
+ }
+
+ .loader {
+   border: 16px solid $color-primary-4;
+   border-radius: 50%;
+   width: 120px;
+   height: 120px;
+   border-top: 16px solid red;
+   border-bottom: 16px solid red;
+   animation: loader 2s linear infinite;
+   z-index: 501;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+ }
