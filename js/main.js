@@ -187,4 +187,12 @@ const hideLoader = () => {
   elements.loader.style.display = "none";
 }
 
-window.onload = hideLoader();
+const domReady = (fn) => { setInterval( fn => {
+  if(document.readyState === 'complete') {
+    clearInterval(domReady);
+    return fn;
+  }
+}, 100);
+}
+
+domReady(hideLoader());
