@@ -194,5 +194,7 @@ const domReady = (fn) => { setInterval( fn => {
   }
 }, 100);
 }
+setTimeout( () => {
+  domReady(hideLoader());
+}, 1500);
 
-domReady(hideLoader());
